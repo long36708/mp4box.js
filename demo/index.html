@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
     <head>
     	<meta charset="UTF-8">
 		<title>MP4Box.js - JavaScript MP4 Reader/Fragmenter</title>
 		<!-- Include basic JQuery and JQuery UI files -->
-		<script src="lib/jquery/jquery.js"></script>		
+		<script src="lib/jquery/jquery.js"></script>
   		<link href="lib/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
-		<script src="lib/jquery-ui/jquery-ui.min.js"></script>		
+		<script src="lib/jquery-ui/jquery-ui.min.js"></script>
 
 		<link rel="stylesheet" href="style.css" />
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -109,7 +109,7 @@
 				</div>
 			  </div>
 			  <div id="tabs-5">
-					<h3>Instructions</h3>					
+					<h3>Instructions</h3>
 				    <p>To run this demo (in Chrome or Firefox), you should:</p>
 					<ol>
 					  <li>Select an existing file or enter a URL. <br>
@@ -123,7 +123,7 @@
 								  <li>Select a chunk size for the download of the media file. 0 means fetching the whole file in one XHR.</li>
 								  <li>Select the timeout between two chunk downloads (the associated bitrate is computed and displayed)</li>
 								  <li>You can alternatively select the real-time download: the timeout for download is computed based on the buffer state and playback rate</li>
-								</ul>				  
+								</ul>
 					  		</li>
 					  		<li>Segmentation Settings: change the number of frames used to created a media segment. A small number means a lot of processing for the browser via MSE. A large number means additional latency before the initial playback.</li>
 					  		<li>Debug Settings:
@@ -134,8 +134,8 @@
 					  		</li>
 					    </ul>
 					  </li>
-					  <li>Then either hit the "Play" button and let the file download and play, or control individually each step:  
-					    <ol>				  
+					  <li>Then either hit the "Play" button and let the file download and play, or control individually each step:
+					    <ol>
 						  <li>Hit the "Load Media Info" button. Chunks will be downloaded until there is enough data to display the file information.</li>
 						  <li>Once the file information is displayed, select the tracks you want to play. For each track a SourceBuffer or a TextTrack is created.</li>
 						  <li>Once your tracks are selected, initialize the Source Buffers with the "Initialize Source Buffers" button. (You can also hit the "Add and Initialize All Source Buffers". This will select all tracks and try to create a SourceBuffer for it. Might not work for all files!)</li>
