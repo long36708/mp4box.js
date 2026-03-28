@@ -1,13 +1,13 @@
 <input id="fileInput" type="file"><br/>
-<input id="keepMdatInput" type="checkbox">Keep mdat data</input><br/>
-<input id="doSegmentation" type="checkbox" checked>Perform Segmentation</input><br/>
-<input id="doReleaseSamples" type="checkbox" checked>Release Samples after Segmentation</input><br/>
-Number of samples per segment or per extraction: <input id="nbSamples" type="range" value=1000 min=1 max=10000 onchange="this.nextElementSibling.value = this.value" ></input><output>1000</output><br/>
-<button onclick="load()">Load</button>
-<div >File Size:
+<input id="keepMdatInput" type="checkbox">保留 mdat 数据</input><br/>
+<input id="doSegmentation" type="checkbox" checked>执行分段</input><br/>
+<input id="doReleaseSamples" type="checkbox" checked>分段后释放样本</input><br/>
+每个分段或每次提取的样本数量: <input id="nbSamples" type="range" value=1000 min=1 max=10000 onchange="this.nextElementSibling.value = this.value" ></input><output>1000</output><br/>
+<button onclick="load()">加载</button>
+<div >文件大小:
   <p id='file_size'></p>
 </div>
-<div>Memory usage:
+<div>内存使用:
   <p id='memory_usage'></p>
 </div>
 <script src="../dist/mp4box.all.global.js"></script>

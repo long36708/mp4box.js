@@ -2,7 +2,7 @@
 <html lang="zh">
     <head>
     	<meta charset="UTF-8">
-		<title>MP4Box.js - JavaScript MP4 Reader/Fragmenter</title>
+		<title>MP4Box.js - JavaScript MP4 读取器/分段器</title>
 
 		<!-- Include basic JQuery and JQuery UI files -->
 		<script src="lib/jquery/jquery.js"></script>
@@ -126,50 +126,44 @@
 		}
 		</style>
 		<link rel="stylesheet" href="style.css" />
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
 	<body>
 		<!-- GitHub Stat Buttons -->
 		<div style="display: flex; align-items: center; justify-content: space-between;">
 			<div>
-				<h3 style="margin-bottom: 0;">MP4Box.js / ISOBMFF Box Structure Viewer (see <a href="./">other demos</a>)</h3>
-				<p style="margin-top: 4px;">Client-side tool: files are processed locally in your browser and not uploaded to any server</p>
-			</div>
-			<div>
-				<a class="github-button" href="https://github.com/gpac/mp4box.js" data-color-scheme="light" data-size="large" data-show-count="true" aria-label="Star gpac/mp4box.js on GitHub">Star</a>
-				<a class="github-button" href="https://github.com/gpac/mp4box.js/fork" data-color-scheme="light" data-size="large" data-show-count="true" aria-label="Fork gpac/mp4box.js on GitHub">Fork</a>
-				<a class="github-button" href="https://github.com/gpac/mp4box.js/subscription" data-color-scheme="light" data-size="large" data-show-count="true" aria-label="Watch gpac/mp4box.js on GitHub">Watch</a>
+				<h3 style="margin-bottom: 0;">MP4Box.js / ISOBMFF Box 结构查看器 (参见 <a href="./">其他演示</a>)</h3>
+				<p style="margin-top: 4px;">客户端工具：文件在您的浏览器中本地处理，不会上传到任何服务器</p>
 			</div>
 		</div>
 
 		<div id="menubar" style="clear: both;"></div>
 		<div id="resulttabs" style="clear: both;">
 		  <ul>
-		    <li><a href="#movieview">File Overview</a></li>
-		    <li><a href="#boxview">Box View</a></li>
-		    <li><a href="#sampleview">Sample View</a></li>
-		    <li><a href="#itemview">Item View</a></li>
-		    <li><a href="#entitygroupview">Entity Group View</a></li>
-		    <li><a href="#segmentview">Segment View</a></li>
+		    <li><a href="#movieview">文件概览</a></li>
+		    <li><a href="#boxview">Box 视图</a></li>
+		    <li><a href="#sampleview">Sample 视图</a></li>
+		    <li><a href="#itemview">Item 视图</a></li>
+		    <li><a href="#entitygroupview">Entity Group 视图</a></li>
+		    <li><a href="#segmentview">Segment 视图</a></li>
 
 		  </ul>
 			<div id="movieview">
 			</div>
 			<div id="boxview">
 				<ul>
-					<li><a href="#boxtreeview">Tree View</a></li>
-					<li><a href="#boxpartitionview">Partition View</a></li>
-					<li><a href="#boxmapview">Treemap View</a></li>
+					<li><a href="#boxtreeview">树状视图</a></li>
+					<li><a href="#boxpartitionview">分区视图</a></li>
+					<li><a href="#boxmapview">树状图视图</a></li>
 				</ul>
 				<div id="boxtreeview">
 					<table>
 						<thead>
 							<tr>
-								<th>Box Tree View
+								<th>Box 树状视图
 									<button id="expandall" title="Expand all">&#9650;&#9660;</button>
 									<button id="collapseall" title="Collapse all">&#9660;&#9650;</button>
 								</th>
-								<th>Box Property View</th>
+								<th>Box 属性视图</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -192,15 +186,15 @@
 				</div>
 			</div>
 			<div id="sampleview">
-				<label>View type:<select name="sampleviewselector" id="sampleviewselector">
-					<option selected="selected">Sample Table</option>
-					<option>Sample Graph</option>
-					<option>Sample Map</option>
-					<option>Sample Timeline</option>
+				<label>视图类型:<select name="sampleviewselector" id="sampleviewselector">
+					<option selected="selected">Sample 表格</option>
+					<option>Sample 图表</option>
+					<option>Sample 映射</option>
+					<option>Sample 时间轴</option>
 				</select></label>
 				<label>Track ID: <select id="trackSelect" name="trackSelect"></select></label>&nbsp;
-				<label>Codec: <input type="text" disabled id="trackinfo" style="width: 120px;"></label>&nbsp;
-				<label>Sample range: <input type="text" disabled id="sample-range-value" style="width: 200px;"></label>
+				<label>编解码器: <input type="text" disabled id="trackinfo" style="width: 120px;"></label>&nbsp;
+				<label>Sample 范围: <input type="text" disabled id="sample-range-value" style="width: 200px;"></label>
 				<div id="sample-range"></div>
 				<div>
 					<div id="sampletable"></div>
@@ -214,11 +208,11 @@
 			<div id="entitygroupview">
 			</div>
 			<div id="segmentview">
-				<label>View type:<select name="segmentviewselector" id="segmentviewselector">
-					<option selected="selected">Segment Table</option>
-					<option>Segment Graph</option>
+				<label>视图类型:<select name="segmentviewselector" id="segmentviewselector">
+					<option selected="selected">Segment 表格</option>
+					<option>Segment 图表</option>
 				</select></label>
-				<label>Segment range: <input type="text" disabled id="segment-range-value" style="width: 200px;"></label>
+				<label>Segment 范围: <input type="text" disabled id="segment-range-value" style="width: 200px;"></label>
 				<div id="segment-range"></div>
 				<div>
 					<div id="segmenttable"></div>

@@ -2,7 +2,7 @@
 <html lang="zh">
     <head>
     	<meta charset="UTF-8">
-		<title>MP4Box.js - AVIF MSE-based viewer</title>
+		<title>MP4Box.js - AVIF MSE 查看器</title>
 
 		<!-- Include basic JQuery and JQuery UI files -->
 		<script src="lib/jquery/jquery.js"></script>
@@ -17,25 +17,19 @@
   		<script type="text/javascript" src="lib/d3/d3.js"></script>
 
 		<link rel="stylesheet" href="style.css" />
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</head>
 	<body>
 		<!-- GitHub Stat Buttons -->
 		<div style="display: flex; align-items: center; justify-content: space-between;">
 			<div>
-				<h3 style="margin-bottom: 0;">MP4Box.js / MSE AVIF Viewer (see <a href="./">other demos</a>)</h3>
-				<p style="margin-top: 4px;">Client-side tool: files are processed locally in your browser and not uploaded to any server</p>
-			</div>
-			<div>
-				<a class="github-button" href="https://github.com/gpac/mp4box.js" data-color-scheme="light" data-size="large" data-show-count="true" aria-label="Star gpac/mp4box.js on GitHub">Star</a>
-				<a class="github-button" href="https://github.com/gpac/mp4box.js/fork" data-color-scheme="light" data-size="large" data-show-count="true" aria-label="Fork gpac/mp4box.js on GitHub">Fork</a>
-				<a class="github-button" href="https://github.com/gpac/mp4box.js/subscription" data-color-scheme="light" data-size="large" data-show-count="true" aria-label="Watch gpac/mp4box.js on GitHub">Watch</a>
+<h3 style="margin-bottom: 0;">MP4Box.js / MSE AVIF 查看器 (参见<a href="./">其他演示</a>)</h3>
+<p style="margin-top: 4px;">客户端工具：文件在您的浏览器中本地处理，不会上传到任何服务器</p>
 			</div>
 		</div>
 
 		<div id="menubar" style="clear: both;"></div>
 		<div id="results" style="clear: both;">
-			<video id="v">
+			<video id="v" autoplay controls></video>
 		</div>
 		<script src="../dist/mp4box.all.global.js"></script>
 		<script>
